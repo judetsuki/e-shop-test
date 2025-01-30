@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "The Unabomber Manifesto  (THIS IS A JOKE)",
+    "price": 10.99,
+    "image": "https://i5.walmartimages.com/seo/The-Unabomber-Manifesto-Paperback-9781595948151_35cfa807-f2b1-4833-927f-238d45209d48.f0b7b5260a80b145753640a4977f3dfe.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+    "category": "books"
+  },
+
+  {
+    "id": 2,
+    "name": "Pirarrucu Honey Wide Square Toe Cowboy Boots",
+    "price": 499.51,
+    "image": "https://img.freepik.com/premium-photo/leather-cowboy-boots-white-background_864588-23555.jpg",
+    "category": "clothing"
+  },
+  {
+    "id": 3,
+    "name": "Apple Macbook Air 2013",
+    "price": 240.99,
+    "image": "https://mac77.ru/wp-content/uploads/346664.jpg",
+    "category": "electronics"
+  },
+  {
+    "id": 4,
+    "name": "IBM ThinkPad R51",
+    "price": 920.99,
+    "image": "https://live.staticflickr.com/8681/16367080435_ff3096dd60_z.jpg",
+    "category": "electronics"
+  },
+  {
+    "id": 5,
+    "name": "Guidi 788",
+    "price": 779.99,
+    "image": "https://www.svrn.com/cdn/shop/products/788zi-full-grain-metal-heel-boot-in-black-men-s-boots-guidi-svrn-chicago-30128846372937_800x1000_crop_center.jpg?v=1671830604",
+    "category": "clothing"
+  },
+  {
+    "id": 6,
+    "name": "The Art of War",
+    "price": 6,
+    "image": "https://m.media-amazon.com/images/I/71MizulW5AL.jpg",
+    "category": "books"
+  }
+]
+
