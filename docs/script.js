@@ -12,7 +12,7 @@ fetch("products.json")
     originalProducts = [...products];
     renderProducts();
   });
-//кнопку попросил AI сделать
+//кнопку для страниц попросил AI сделать
 function renderPagination() {
   const pagination = document.getElementById("pagination");
   pagination.textContent = "";
@@ -57,7 +57,23 @@ function renderProducts() {
     const img = document.createElement("img");
     img.src = product.image;
     img.style.maxHeight = 300 + "px";
+
+    const addToCartButton = document.createElement("img");
+    addToCartButton.src = "https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=";
+    addToCartButton.style.width = "25px";
+    addToCartButton.style.height = "25px";
+    addToCartButton.style.cursor = "pointer";
+    addToCartButton.style.border = "1px solid";
+    addToCartButton.style.borderRadius = "5px";
+    addToCartButton.style.marginTop = "5px";
+
+    addToCartButton.addEventListener("click", () => {
+      cart.push(product);
+      renderCart();
+    });
+
     li.appendChild(img);
+    li.appendChild(addToCartButton);
     productList.appendChild(li);
   });
 
