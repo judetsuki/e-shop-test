@@ -12,7 +12,7 @@ fetch("products.json")
     originalProducts = [...products];
     renderProducts();
   });
-//кнопку для страниц попросил AI сделать
+//кнопку для страниц попросил AI сделать, и оно сделал классы из теилвинда я так понимаю
 function renderPagination() {
   const pagination = document.getElementById("pagination");
   pagination.textContent = "";
@@ -57,9 +57,10 @@ function renderProducts() {
     const img = document.createElement("img");
     img.src = product.image;
     img.style.maxHeight = 300 + "px";
-
+    // тут тоже классы для кнопки Ai попросил сделать
     const addToCartButton = document.createElement("img");
-    addToCartButton.src = "https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=";
+    addToCartButton.src =
+      "https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA=";
     addToCartButton.style.width = "25px";
     addToCartButton.style.height = "25px";
     addToCartButton.style.cursor = "pointer";
@@ -85,9 +86,26 @@ function renderCart() {
   cartItems.textContent = "";
   let total = 0;
 
-  cart.forEach((item) => {
+  cart.forEach((item, index) => {
     const li = document.createElement("li");
     li.textContent = `${item.name} - €${item.price.toFixed(2)}`;
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "X";
+    deleteButton.classList.add(
+      "border",
+      "rounded-md",
+      "focus:ring-2",
+      "focus:ring-red-500",
+      "text-red-500"
+    );
+
+    deleteButton.addEventListener("click", () => {
+      cart.splice(index, 1);
+      renderCart();
+    });
+
+    li.appendChild(deleteButton);
     cartItems.appendChild(li);
     total += item.price;
   });
